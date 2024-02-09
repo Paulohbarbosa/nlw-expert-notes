@@ -1,30 +1,65 @@
-# React + TypeScript + Vite
+# NLW - Expert - ReactJS
+ 
+## Sobre o projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://ignite-02-coffee-delivery.netlify.app/
 
-Currently, two official plugins are available:
+O Note é um projeto desenvolvido na Trilha de React JS na NLW Expert 2024 da  **Rocketseat**. Usamos a API Speech Recognition do Navegador para convertermos a fala em texto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Neste foi proposto utilizando os fundamentos do ReactJs:
+- Adicionar notas;
+- Excluir notas;
+- Opção para o usuário escrever ou ditar o texto da nota;
+- Pertinência da informação com LocalStorage;
+- Pesquisar o conteúdo da nota;
+- Responsividade.
 
-## Expanding the ESLint configuration
+## Layout web proposto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+https://www.figma.com/community/file/1336456128647909148
 
-- Configure the top-level `parserOptions` property like this:
+## Layout web desenvolvido
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+<img alt="" src="./public/cap 01.png" width="100%">
+
+<img alt="" src="./public/cap 02.png" width="100%">
+
+## Tecnologias utilizadas
+- HTML / CSS / TypeScript
+- ReactJS
+- Vite
+- Tailwindcss
+- Radix
+- Sonner
+- lucide-react (icones)
+- date-fns
+- API Speech Recognition
+
+## Funcionalidades
+- Estados;
+- Imutabilidade do estado;
+- Propriedades;
+- Componentização;
+- ContextAPI;
+- LocalStorage ;
+
+# Como executar o projeto
+
+Pré-requisitos: NODE e npm
+
+```bash
+# clonar repositório
+git clone https://github.com/Paulohbarbosa/nlw-expert-notes.git 
+
+# entrar na pasta do projeto raiz e instale as dependências
+npm install
+
+# executar o projeto, em seguida clique no endereço que foi exibido no seu promt
+npm rum dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Autor
+
+Paulo Barbosa
+
+https://www.linkedin.com/in/paulo-henrique-barbosa-495492160
