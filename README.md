@@ -2,8 +2,6 @@
  
 ## Sobre o projeto
 
-https://ignite-02-coffee-delivery.netlify.app/
-
 O Note é um projeto desenvolvido na Trilha de React JS na NLW Expert 2024 da  **Rocketseat**. Usamos a API Speech Recognition do Navegador para convertermos a fala em texto.
 
 Neste foi proposto utilizando os fundamentos do ReactJs:
