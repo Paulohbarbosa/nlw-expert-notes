@@ -2,8 +2,6 @@ import { ChangeEvent, useState } from 'react'
 import logo from './assets/Logo.svg'
 import { NewNoteCard } from './componetes/new-note-card'
 import { NoteCard } from './componetes/note-card'
-import { set } from 'date-fns'
-
 interface Note{
   id: String
   date: Date
@@ -33,6 +31,15 @@ export function App() {
 
     localStorage.setItem('notes', JSON.stringify(notesArray))
   }
+  function onNoteDeleted(id: string){
+    const notesArray = notes.filter(note =>{
+      return note.id !== id
+    } )
+
+    setNotes(notesArray)
+
+    localStorage.setItem('notes', JSON.stringify(notesArray))
+  }
 
   function handleSearch(event: ChangeEvent<HTMLInputElement>) {
     const query = event.target.value
@@ -41,7 +48,7 @@ export function App() {
 
   const filteredNotes = search !== '' ? notes.filter(note => note.content.toLowerCase().includes(search.toLowerCase())) : notes
  return (
-  <div className='mx-auto max-w-6xl my-12 space-y-6'>
+  <div className='mx-auto max-w-6xl my-12 space-y-6 px-5 lg:px-0'>
     <img src={logo} alt='NLW Expert' />
 
     <form className='w-full '>
@@ -55,11 +62,11 @@ export function App() {
 
     <div className='h-px bg-slate-700'/>
     
-    <div className='grid grid-cols-3 gap-6 auto-rows-[250px]'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]'>
       <NewNoteCard onNoteCreated={onNoteCreated}/>
       
       {filteredNotes.map(note =>{
-        return <NoteCard key={note.id} note={note}/>
+        return <NoteCard onNoteDeleted={onNoteDeleted} key={note.id} note={note}/>
       })}   
     </div>
   </div>
